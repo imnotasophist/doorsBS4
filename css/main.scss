@@ -15,7 +15,20 @@ body {
     font-size: 16px;
     background-color: $divider-color;
     color: $secondary-text-color;
-
+    // Кнопки
+    .btn {
+        border: 2px solid $primary-color;
+        background-color: transparent;
+        color: $primary-color;
+        border-radius: 0.5rem;
+        font-size: 1em;
+        padding: 1rem 2rem;
+        &:hover {
+            background-color: $primary-color;
+            color: $primary-color-text;
+        }
+    }
+    // Меню
     .navbar {
         padding: 0.3rem 5rem;
         border: 1px solid $primary-text-color;
@@ -35,6 +48,60 @@ body {
 
             li.active>a.nav-link {
                 color: $primary-color;
+            }
+        }
+    }
+    // Шапка
+    header {
+        background-image: url('../img/header.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 15rem 3rem;
+        p {
+            color: $secondary-text-color;
+        }
+        h4 {
+            font-size: 20px;
+            font-weight: bold;
+            color: $secondary-text-color;
+            > span {
+                color: $primary-color;
+            }
+        }
+        form {
+            border: double 1rem $primary-color-text;
+
+            div {
+                background-color: rgba($primary-color-text, 0.95);
+                padding: 1.5rem;
+                
+            }
+
+            span {
+                color: $primary-color;
+                font-weight: bold;
+                font-size: 1em;
+            }
+
+            input {
+                width: 100%;
+                padding: 1rem;
+                background-color: transparent;
+                border: 2px solid $primary-color;
+                border-radius: 0.5rem;
+                margin-top: 1.5rem;
+                margin-bottom: 1.5rem;
+
+                &::-webkit-input-placeholder {
+                    color: $primary-color;
+                }
+                &:-moz-input-placeholder {
+                    color: $primary-color;
+                }
+                &:-ms-input-placeholder {
+                    color: $primary-color;
+                }
             }
         }
     }
