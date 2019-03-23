@@ -191,4 +191,37 @@ body .popcat a:hover p {
   -webkit-transform: scale(0.9);
           transform: scale(0.9);
 }
+
+body .adv {
+  color: #FFFFFF;
+  background: url("../img/fon-adv.png") center center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+body .adv:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-image: -webkit-gradient(linear, left top, right top, from(#303F9F), color-stop(50%, #3F51B5), to(#FFFFFF));
+  background-image: linear-gradient(left, #303F9F 0%, #3F51B5 50%, #FFFFFF 100%);
+  opacity: 0.6;
+}
+
+body .adv .row {
+  padding: 3rem 0;
+}
+
+body .adv h6 {
+  margin: 1rem 0;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+body .adv p {
+  font-size: 0.7em;
+}
 /*# sourceMappingURL=main.css.map */
