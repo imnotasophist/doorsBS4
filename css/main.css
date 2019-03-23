@@ -8,6 +8,46 @@ body {
   color: #757575;
 }
 
+body .container {
+  padding: 0;
+}
+
+body .title {
+  overflow: hidden;
+  text-align: center;
+}
+
+body .title h4 {
+  font-weight: bold;
+  color: #757575;
+  margin: 2rem 0;
+  padding: 2rem;
+  font-size: 1.5em;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+body .title:before, body .title:after {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 20%;
+  height: 1rem;
+  background-color: #3F51B5;
+  position: relative;
+  opacity: 0.5;
+}
+
+body .title:before {
+  margin-left: -100%;
+  left: 1.5rem;
+}
+
+body .title:after {
+  margin-right: -100%;
+  right: 1.5rem;
+}
+
 body .btn {
   border: 2px solid #3F51B5;
   background-color: transparent;
@@ -100,5 +140,55 @@ body header form input:-moz-input-placeholder {
 
 body header form input:-ms-input-placeholder {
   color: #3F51B5;
+}
+
+body .popcat {
+  background-image: url(../img/background.jpg);
+  padding-bottom: 4rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+body .popcat a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+}
+
+body .popcat a P {
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+  color: #212121;
+  text-shadow: 0 0 3px #FFFFFF;
+  position: absolute;
+  font-size: 1.6em;
+  z-index: 100;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+body .popcat a img {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+body .popcat a:hover img {
+  background-color: #C5CAE9;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+body .popcat a:hover p {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
 }
 /*# sourceMappingURL=main.css.map */
