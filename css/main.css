@@ -55,11 +55,29 @@ body .btn {
   border-radius: 0.5rem;
   font-size: 1em;
   padding: 1rem 2rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
 body .btn:hover {
   background-color: #3F51B5;
   color: #FFFFFF;
+}
+
+body .btn-inverse {
+  border: 2px solid #3F51B5;
+  background-color: #3F51B5;
+  color: #FFFFFF;
+  border-radius: 0;
+  font-size: 1em;
+  padding: 1rem 2rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+body .btn-inverse:hover {
+  color: #3F51B5;
+  background-color: transparent;
 }
 
 body .navbar {
@@ -85,9 +103,9 @@ body .navbar .navbar-nav li.active > a.nav-link {
 
 body header {
   background-image: url("../img/header.png");
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
   padding: 15rem 3rem;
 }
 
@@ -143,11 +161,11 @@ body header form input:-ms-input-placeholder {
 }
 
 body .popcat {
-  background-image: url(../img/background.jpg);
-  padding-bottom: 4rem;
+  background-image: url("../img/background.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  padding-bottom: 4rem;
 }
 
 body .popcat a {
@@ -194,8 +212,10 @@ body .popcat a:hover p {
 
 body .adv {
   color: #FFFFFF;
-  background: url("../img/fon-adv.png") center center no-repeat;
+  background-image: url("../img/fon-adv.png");
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   position: relative;
 }
 
@@ -223,5 +243,20 @@ body .adv h6 {
 
 body .adv p {
   font-size: 0.7em;
+}
+
+body .popgoods {
+  background-image: url("../img/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+body .popgoods .row {
+  padding-bottom: 3rem;
+}
+
+body .popgoods .row:first-child {
+  padding-bottom: 0;
 }
 /*# sourceMappingURL=main.css.map */

@@ -7,6 +7,13 @@ $primary-text-color: #212121;
 $secondary-text-color: #757575;
 $divider-color: #BDBDBD;
 
+@mixin background-img($src) {
+    background-image: url($src);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 html {
     font-size: 10px;
 }
@@ -60,9 +67,23 @@ body {
         border-radius: 0.5rem;
         font-size: 1em;
         padding: 1rem 2rem;
+        transition: all 0.2s;
         &:hover {
             background-color: $primary-color;
             color: $primary-color-text;
+        }
+    }
+    .btn-inverse {
+        border: 2px solid $primary-color;
+        background-color: $primary-color;
+        color: $primary-color-text;
+        border-radius: 0;
+        font-size: 1em;
+        padding: 1rem 2rem;
+        transition: all 0.2s;
+        &:hover {
+            color: $primary-color;
+            background-color: transparent;
         }
     }
     // Меню
@@ -90,10 +111,7 @@ body {
     }
     // Шапка
     header {
-        background-image: url('../img/header.png');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+        @include background-img('../img/header.png');
         padding: 15rem 3rem;
         p {
             color: $secondary-text-color;
@@ -144,11 +162,8 @@ body {
     }
     // Популярные категории
     .popcat {
-        background-image: url(../img/background.jpg);
+        @include background-img('../img/background.jpg');
         padding-bottom: 4rem;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
         a {
             display: flex;
             align-items: center;
@@ -182,8 +197,7 @@ body {
     // Преимущества
     .adv {
         color: $primary-color-text;
-        background: url('../img/fon-adv.png') center center no-repeat;
-        background-size: cover;
+        @include background-img('../img/fon-adv.png');
         position: relative;
         &:before {
             content: "";
@@ -205,6 +219,16 @@ body {
         }
         p {
             font-size: 0.7em;
+        }
+    }
+    // Популярные товары
+    .popgoods {
+        @include background-img('../img/background.jpg');
+        .row {
+            padding-bottom: 3rem;
+        }
+        .row:first-child {
+            padding-bottom: 0;
         }
     }
 }
