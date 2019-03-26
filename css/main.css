@@ -259,4 +259,77 @@ body .popgoods .row {
 body .popgoods .row:first-child {
   padding-bottom: 0;
 }
+
+body .form_zamer {
+  position: relative;
+  background-image: url("../img/fiedback.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+body .form_zamer:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-image: -webkit-gradient(linear, left top, right top, from(#303F9F), color-stop(50%, #3F51B5), to(#FFFFFF));
+  background-image: linear-gradient(left, #303F9F 0%, #3F51B5 50%, #FFFFFF 100%);
+  opacity: 0.6;
+}
+
+body .form_zamer .row {
+  padding: 3rem 0;
+}
+
+body .form_zamer h5 {
+  font-size: 1.2em;
+}
+
+body .form_zamer h6 {
+  font-size: 1em;
+}
+
+body .form_zamer p {
+  font-size: 0.8em;
+}
+
+body .form_zamer img {
+  margin-bottom: 1.5rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+body .form_zamer img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+body .form_zamer input {
+  width: 100%;
+  padding: 1rem;
+  background: transparent;
+  border: 2px solid #FFFFFF;
+  margin-bottom: 1rem;
+}
+
+body .form_zamer input::-webkit-input-placeholder {
+  color: #FFFFFF;
+}
+
+body .form_zamer input:-moz-input-placeholder {
+  color: #FFFFFF;
+}
+
+body .form_zamer input:-ms-input-placeholder {
+  color: #FFFFFF;
+}
+
+body .form_zamer button {
+  color: #FFFFFF;
+  border: 2px solid #FFFFFF;
+  padding: 1rem;
+}
 /*# sourceMappingURL=main.css.map */

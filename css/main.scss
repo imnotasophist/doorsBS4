@@ -14,6 +14,31 @@ $divider-color: #BDBDBD;
     background-repeat: no-repeat;
 }
 
+@mixin gradient-bg($color1, $color2, $color3) {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient(left, $color1 0%, $color2 50%, $color3 100%);
+    opacity: 0.6;
+}
+
+@mixin input-color($placeholder-color) {
+    &::-webkit-input-placeholder {
+        color: $placeholder-color;
+    }
+
+    &:-moz-input-placeholder {
+        color: $placeholder-color;
+    }
+
+    &:-ms-input-placeholder {
+        color: $placeholder-color;
+    }
+}
+
 html {
     font-size: 10px;
 }
@@ -22,14 +47,17 @@ body {
     font-size: 16px;
     background-color: $divider-color;
     color: $secondary-text-color;
+
     // Контейнер фикс
     .container {
         padding: 0;
     }
+
     // Заголовок
     .title {
         overflow: hidden;
         text-align: center;
+
         h4 {
             font-weight: bold;
             color: $secondary-text-color;
@@ -39,6 +67,7 @@ body {
             display: inline-block;
             vertical-align: middle;
         }
+
         &:before,
         &:after {
             content: "";
@@ -50,15 +79,18 @@ body {
             position: relative;
             opacity: 0.5;
         }
+
         &:before {
             margin-left: -100%;
             left: 1.5rem;
         }
+
         &:after {
             margin-right: -100%;
             right: 1.5rem;
         }
     }
+
     // Кнопки
     .btn {
         border: 2px solid $primary-color;
@@ -68,11 +100,13 @@ body {
         font-size: 1em;
         padding: 1rem 2rem;
         transition: all 0.2s;
+
         &:hover {
             background-color: $primary-color;
             color: $primary-color-text;
         }
     }
+
     .btn-inverse {
         border: 2px solid $primary-color;
         background-color: $primary-color;
@@ -81,11 +115,13 @@ body {
         font-size: 1em;
         padding: 1rem 2rem;
         transition: all 0.2s;
+
         &:hover {
             color: $primary-color;
             background-color: transparent;
         }
     }
+
     // Меню
     .navbar {
         padding: 0.3rem 5rem;
@@ -109,28 +145,33 @@ body {
             }
         }
     }
+
     // Шапка
     header {
         @include background-img('../img/header.png');
         padding: 15rem 3rem;
+
         p {
             color: $secondary-text-color;
         }
+
         h4 {
             font-size: 20px;
             font-weight: bold;
             color: $secondary-text-color;
-            > span {
+
+            >span {
                 color: $primary-color;
             }
         }
+
         form {
             border: double 1rem $primary-color-text;
 
             div {
                 background-color: rgba($primary-color-text, 0.95);
                 padding: 1.5rem;
-                
+
             }
 
             span {
@@ -147,28 +188,22 @@ body {
                 border-radius: 0.5rem;
                 margin-top: 1.5rem;
                 margin-bottom: 1.5rem;
-
-                &::-webkit-input-placeholder {
-                    color: $primary-color;
-                }
-                &:-moz-input-placeholder {
-                    color: $primary-color;
-                }
-                &:-ms-input-placeholder {
-                    color: $primary-color;
-                }
+                @include input-color($primary-color);
             }
         }
     }
+
     // Популярные категории
     .popcat {
         @include background-img('../img/background.jpg');
         padding-bottom: 4rem;
+
         a {
             display: flex;
             align-items: center;
             justify-content: center;
             text-decoration: none;
+
             P {
                 padding: 0;
                 margin: 0;
@@ -180,55 +215,108 @@ body {
                 z-index: 100;
                 transition: all 1s;
             }
+
             img {
                 transition: all 0.5s;
             }
+
             &:hover {
                 img {
                     background-color: $primary-color-light;
                     transform: scale(1.1);
                 }
+
                 p {
                     transform: scale(0.9);
                 }
             }
         }
     }
+
     // Преимущества
     .adv {
         color: $primary-color-text;
         @include background-img('../img/fon-adv.png');
         position: relative;
+
         &:before {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            left: 0;
-            bottom: 0;
-            background-image: linear-gradient(left, $primary-color-dark 0%, $primary-color 50%, $primary-color-text 100%);
-            opacity: 0.6;
+            @include gradient-bg($primary-color-dark, $primary-color, $primary-color-text);
         }
+
         .row {
             padding: 3rem 0;
         }
+
         h6 {
             margin: 1rem 0;
             font-weight: bold;
             font-size: 1em;
         }
+
         p {
             font-size: 0.7em;
         }
     }
+
     // Популярные товары
     .popgoods {
         @include background-img('../img/background.jpg');
+
         .row {
             padding-bottom: 3rem;
         }
+
         .row:first-child {
             padding-bottom: 0;
+        }
+    }
+
+    // Заказать замеры
+    .form_zamer {
+        position: relative;
+        @include background-img('../img/fiedback.png');
+
+        &:before {
+            @include gradient-bg($primary-color-dark, $primary-color, $primary-color-text);
+        }
+
+        .row {
+            padding: 3rem 0;
+        }
+
+        h5 {
+            font-size: 1.2em;
+        }
+
+        h6 {
+            font-size: 1em;
+        }
+
+        p {
+            font-size: 0.8em;
+        }
+
+        img {
+            margin-bottom: 1.5rem;
+            transition: all 0.5s;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+
+        input {
+            width: 100%;
+            padding: 1rem;
+            background: transparent;
+            border: 2px solid $primary-color-text;
+            margin-bottom: 1rem;
+            @include input-color($primary-color-text);
+        }
+        button {
+            color: $primary-color-text;
+            border: 2px solid $primary-color-text;
+            padding: 1rem;
         }
     }
 }
