@@ -357,4 +357,26 @@ body .reviews .carousel-control-prev-icon {
 body .reviews .carousel-control-next-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%233f51b5' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
 }
+
+body footer {
+  border: 1px solid #212121;
+  color: #212121;
+  background: #FFFFFF;
+}
+
+body footer menu a.active {
+  color: #3F51B5;
+}
+
+body footer menu a {
+  color: #212121;
+}
+
+body footer menu a:hover {
+  color: #3F51B5;
+}
+
+body footer p span {
+  color: #3F51B5;
+}
 /*# sourceMappingURL=main.css.map */
