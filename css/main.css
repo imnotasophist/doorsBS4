@@ -332,4 +332,29 @@ body .form_zamer button {
   border: 2px solid #FFFFFF;
   padding: 1rem;
 }
+
+body .reviews {
+  background-image: url("../img/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 3rem;
+}
+
+body .reviews .card {
+  height: 100%;
+}
+
+body .reviews .card h5 {
+  font-size: 1em;
+  color: #3F51B5;
+}
+
+body .reviews .carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%233f51b5' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+body .reviews .carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%233f51b5' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
 /*# sourceMappingURL=main.css.map */
