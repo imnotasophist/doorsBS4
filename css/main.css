@@ -379,4 +379,45 @@ body footer menu a:hover {
 body footer p span {
   color: #3F51B5;
 }
+
+@media screen and (max-width: 992px) {
+  body {
+    font-size: 20px;
+  }
+  body header {
+    padding: 3rem 0rem;
+  }
+  body .popcat a p {
+    font-size: 1em;
+  }
+  body .form_zamer button {
+    margin-bottom: 1.5rem;
+  }
+  body .popgoods .row {
+    padding-bottom: 0;
+  }
+  body .popgoods .row .title {
+    margin: 0;
+  }
+  body .popgoods .row h4 {
+    padding: 1rem;
+    margin: 1rem 3rem;
+  }
+  body .popgoods .row div {
+    margin-bottom: 1.5rem;
+  }
+  body footer {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body .title:before, body .title:after {
+    content: '';
+    display: none;
+  }
+  body header p {
+    font-size: 0.8em;
+  }
+}
 /*# sourceMappingURL=main.css.map */
